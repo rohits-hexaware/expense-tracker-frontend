@@ -28,6 +28,21 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 During development, Vite proxies `/api` requests to the backend at `http://localhost:8080` (see `vite.config.js`).
 
+## GitHub Pages deployment
+
+The workflow in `.github/workflows/static.yml` builds the app and pushes `dist/` to the `gh-pages` branch.
+
+**One-time repo setup (required):**
+
+1. **Settings → Actions → General → Workflow permissions** → select **Read and write permissions** → Save
+2. **Settings → Pages → Build and deployment**
+   - **Source:** Deploy from a branch
+   - **Branch:** `gh-pages` / `/ (root)` → Save
+
+If Pages is disabled at the org level, an org admin must enable it under **Organization Settings → Pages**.
+
+Live site: `https://rohits-hexaware.github.io/expense-tracker-frontend/`
+
 ## Scripts
 
 | Command        | Description              |
